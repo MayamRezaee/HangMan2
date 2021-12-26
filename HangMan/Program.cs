@@ -106,8 +106,8 @@ namespace HangMan
                 displayToPlayer.Append('_');
 
             //Making a list of correct and incorrect user guesse 
-            List<char> corGuesses = new List<char>();
-            List<char> incorGuesses = new List<char>();
+            ArrayList corGuesses = new ArrayList();
+            ArrayList incorGuesses = new ArrayList();
 
 
             //Loop through user guesses
@@ -171,6 +171,11 @@ namespace HangMan
                 }
 
                 Console.WriteLine(displayToPlayer.ToString());
+                 WriteLine("Your incorrect guesses are as foloow.");
+                for (int i = 0; i < incorGuesses.Count; i++)
+                {
+                    Console.WriteLine(incorGuesses[i]);
+                }
             }
             //When all the letters are correct 
             if (won)
